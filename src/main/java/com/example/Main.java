@@ -81,6 +81,7 @@ public class Main {
     } else {
       HikariConfig config = new HikariConfig();
       config.setJdbcUrl(dbUrl);
+      System.out.println(config.getDriverClassName()+"");
       return new HikariDataSource(config);
     }
   }
