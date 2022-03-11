@@ -57,7 +57,6 @@ public class Main {
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
 
-      System.out.println(""+ dataSource.toString());
       Statement stmt = connection.createStatement();
       stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
       stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
@@ -82,6 +81,7 @@ public class Main {
       return new HikariDataSource();
     } else {
       HikariConfig config = new HikariConfig();
+      
       config.setJdbcUrl(dbUrl);
       return new HikariDataSource(config);
     }
