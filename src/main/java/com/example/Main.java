@@ -26,6 +26,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -33,6 +38,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 @Controller
@@ -56,6 +62,11 @@ public class Main {
   @ResponseBody
   @RequestMapping("/hi")
   String index1() {
+    HttpHeaders headers = new HttpHeaders();
+    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+    HttpEntity<String> entity = new HttpEntity<String>(headers);
+    RestTemplate rest=new RestTemplate();
+    rest.exchange("https://krishnasai-onb-app.herokuapp.com/db", HttpMethod.GET, entity, String.class).getBody();
     return "Hi";
   }
 
