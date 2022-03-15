@@ -69,7 +69,16 @@ public class Main {
     rest.exchange("https://krishnasai-onb-app.herokuapp.com/db", HttpMethod.GET, entity, String.class).getBody();
     return "Hi";
   }
-
+  @ResponseBody
+  @RequestMapping("/hii")
+  String index2() {
+    HttpHeaders headers = new HttpHeaders();
+    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+    HttpEntity<String> entity = new HttpEntity<String>(headers);
+    RestTemplate rest=new RestTemplate();
+    rest.exchange("https://krishnasai-onb-app.herokuapp.com", HttpMethod.GET, entity, String.class).getBody();
+    return "Hii";
+  }
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
