@@ -70,9 +70,9 @@ public class Main {
     return "Hi";
   }
   @ResponseBody
-  @RequestMapping("/hii")
+  @RequestMapping("/hiii")
   String index2() {
-    return "Hiii";
+    return "Hiiii";
   }
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
