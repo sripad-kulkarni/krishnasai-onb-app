@@ -72,12 +72,7 @@ public class Main {
   @ResponseBody
   @RequestMapping("/hii")
   String index2() {
-    HttpHeaders headers = new HttpHeaders();
-    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-    HttpEntity<String> entity = new HttpEntity<String>(headers);
-    RestTemplate rest=new RestTemplate();
-    rest.exchange("https://krishnasai-onb-app.herokuapp.com", HttpMethod.GET, entity, String.class).getBody();
-    return "Hii";
+    return "Hiii";
   }
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
