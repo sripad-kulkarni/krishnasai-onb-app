@@ -4,8 +4,18 @@
   "addons": [ "heroku-postgresql" ],
   "formation": {
     "web": {
-      "quantity": 2,
+      "quantity": 1,
       "size": "hobby"
     }
-  }
+  },
+  "environments": {
+    "test": {
+      "formation": {
+          "test": {
+            "quantity": 1,
+            "size": "standard-1x"
+          }
+      }
+   }
+}
 }

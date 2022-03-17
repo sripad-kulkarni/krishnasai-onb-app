@@ -66,14 +66,24 @@ public class Main {
     headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
     HttpEntity<String> entity = new HttpEntity<String>(headers);
     RestTemplate rest=new RestTemplate();
-    rest.exchange("https://krishnasai-onb-app.herokuapp.com/db", HttpMethod.GET, entity, String.class).getBody();
+    rest.exchange("https://krishnasai-helper-app.herokuapp.com/db", HttpMethod.GET, entity, String.class).getBody();
     return "Hi";
   }
   @ResponseBody
   @RequestMapping("/hiii")
   String index2() {
+    HttpHeaders headers = new HttpHeaders();
+    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+    HttpEntity<String> entity = new HttpEntity<String>(headers);
+    RestTemplate rest=new RestTemplate();
+    rest.exchange("https://krishnasai-helper-app.herokuapp.com/times", HttpMethod.GET, entity, String.class).getBody();
     return "Hiiii";
   }
+  @ResponseBody
+  @RequestMapping("/hell")
+  String index3() {
+    return "Hell";
+  }  
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
