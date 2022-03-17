@@ -40,7 +40,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.concurrent.Callable;
 
 @Controller
 @SpringBootApplication
@@ -64,7 +63,7 @@ public class Main {
   
   @RequestMapping("/hi")
   @ResponseBody
-  Callable<String> index1() {
+  String index1() {
     HttpHeaders headers = new HttpHeaders();
     headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
     HttpEntity<String> entity = new HttpEntity<String>(headers);
