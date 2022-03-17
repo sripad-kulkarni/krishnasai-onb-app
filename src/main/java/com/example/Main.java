@@ -59,8 +59,10 @@ public class Main {
   String index() {
     return "index";
   }
-  @ResponseBody
+
+  
   @RequestMapping("/hi")
+  @ResponseBody
   String index1() {
     HttpHeaders headers = new HttpHeaders();
     headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -69,8 +71,10 @@ public class Main {
     rest.exchange("https://krishnasai-helper-app.herokuapp.com/db", HttpMethod.GET, entity, String.class).getBody();
     return "Hi";
   }
-  @ResponseBody
+
+ 
   @RequestMapping("/hiii")
+  @ResponseBody
   String index2() {
     HttpHeaders headers = new HttpHeaders();
     headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -79,8 +83,9 @@ public class Main {
     rest.exchange("https://krishnasai-helper-app.herokuapp.com/times", HttpMethod.GET, entity, String.class).getBody();
     return "Hiiii";
   }
-  @ResponseBody
+  
   @RequestMapping("/hell")
+  @ResponseBody
   String index3() {
     return "Hell";
   }  
