@@ -7,5 +7,15 @@
       "quantity": 2,
       "size": "hobby"
     }
-  }
+  },
+  "environments": {
+    "test": {
+      "formation": {
+          "test": {
+            "quantity": 1,
+            "size": "standard-1x"
+          }
+      }
+   }
+}
 }
