@@ -84,10 +84,10 @@ public class Main {
     return "Hiiii";
   }
   
-  @RequestMapping("/hell")
+  @RequestMapping("/hello")
   @ResponseBody
   String index3() {
-    return "Hell";
+    return "Hello";
   }  
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
