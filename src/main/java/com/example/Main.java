@@ -63,7 +63,7 @@ public class Main {
   
   @RequestMapping("/hi")
   @ResponseBody
-  String index1() {
+  Callable<String> index1() {
     HttpHeaders headers = new HttpHeaders();
     headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
     HttpEntity<String> entity = new HttpEntity<String>(headers);
