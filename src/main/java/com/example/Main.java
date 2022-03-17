@@ -74,6 +74,11 @@ public class Main {
   String index2() {
     return "Hiiii";
   }
+  @ResponseBody
+  @RequestMapping("/hello")
+  String index3() {
+    return "Hello";
+  }  
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
