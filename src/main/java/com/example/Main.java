@@ -87,8 +87,8 @@ public class Main {
   @RequestMapping("/hello")
   @ResponseBody
   String index3() {
-    String name="Man";
-    return "Hello"+System.getenv(name);
+    String nam="Man";
+    return "Hello"+System.getenv(nam);
   }  
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
