@@ -8,6 +8,9 @@
       "size": "hobby"
     }
   },
+  "scripts": {
+    "postdeploy": "sleep 60"
+  },
   "environments": {
     "test": {
       "formation": {
