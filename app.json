@@ -9,7 +9,7 @@
     }
   },
   "scripts": {
-    "postdeploy": "sleep 300"
+    "postdeploy": "sleep 360"
   },
   "environments": {
     "test": {
