@@ -1,3 +1,3 @@
 web: java -jar target/java-getting-started-1.0.jar
-worker: exit 0
+worker: echo "Hello"
 release: sleep 5
