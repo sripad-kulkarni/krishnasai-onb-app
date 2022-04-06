@@ -48,6 +48,9 @@ public class Main {
   @Value("${spring.datasource.url}")
   private String dbUrl;
 
+  @Value("${spring.datasource.driver-class-name}")
+  private String classname;
+
   @Autowired
   private DataSource dataSource;
 
@@ -86,8 +89,7 @@ public class Main {
   @RequestMapping("/hello")
   @ResponseBody
   String index3() {
-    String nam="Man";
-    return "Hello"+System.getenv(nam);
+    return "Hello";
   }  
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
@@ -117,8 +119,9 @@ public class Main {
       return new HikariDataSource();
     } else {
       HikariConfig config = new HikariConfig();
-      
+
       config.setJdbcUrl(dbUrl);
+      config.setDriverClassName(classname);
       return new HikariDataSource(config);
     }
   }
