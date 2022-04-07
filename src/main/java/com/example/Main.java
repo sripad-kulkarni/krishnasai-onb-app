@@ -112,7 +112,21 @@ public class Main {
       return "error";
     }
   }
+  @RequestMapping("/db1")
+  String db1(Map<String, Object> model) {
+    try (Connection connection = dataSource.getConnection()) {
 
+      Statement stmt = connection.createStatement();
+      ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM ticks");
+      rs.next();
+
+      model.put("records", rs.getInt("count"));
+      return "db";
+    } catch (Exception e) {
+      model.put("message", e.getMessage());
+      return "error";
+    }
+  }
   @Bean
   public DataSource dataSource() throws SQLException {
     if (dbUrl == null || dbUrl.isEmpty()) {
