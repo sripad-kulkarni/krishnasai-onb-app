@@ -118,9 +118,20 @@ public class Main {
 
       Statement stmt = connection.createStatement();
       ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM ticks");
+      ResultSet rs1 = stmt.executeQuery("SELECT COUNT(*) FROM actor");
+      ResultSet rs2 = stmt.executeQuery("SELECT COUNT(*) FROM address");
+      ResultSet rs3 = stmt.executeQuery("SELECT COUNT(*) FROM category");
+      ResultSet rs4 = stmt.executeQuery("SELECT COUNT(*) FROM city");
       rs.next();
-
+      rs1.next();
+      rs2.next();
+      rs3.next();
+      rs4.next();                  
       model.put("records", rs.getInt("count"));
+      model.put("records", rs1.getInt("count"));
+      model.put("records", rs2.getInt("count"));
+      model.put("records", rs3.getInt("count"));
+      model.put("records", rs4.getInt("count"));
       return "db";
     } catch (Exception e) {
       model.put("message", e.getMessage());
