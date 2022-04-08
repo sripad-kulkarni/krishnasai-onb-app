@@ -52,7 +52,7 @@ public class Main {
   private String classname;
 
   @Autowired
-  private DataSource dataSource;
+ private DataSource dataSource;
 
   public static void main(String[] args) throws Exception {
     SpringApplication.run(Main.class, args);
@@ -127,17 +127,17 @@ public class Main {
       return "error";
     }
   }
-  @Bean
+   @Bean
   public DataSource dataSource() throws SQLException {
-    if (dbUrl == null || dbUrl.isEmpty()) {
-      return new HikariDataSource();
+   if (dbUrl == null || dbUrl.isEmpty()) {
+     return new HikariDataSource();
     } else {
-      HikariConfig config = new HikariConfig();
+       HikariConfig config = new HikariConfig();
 
       config.setJdbcUrl(dbUrl);
       config.setDriverClassName(classname);
       return new HikariDataSource(config);
     }
-  }
+  } 
 
 }
