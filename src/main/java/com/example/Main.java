@@ -136,6 +136,8 @@ public class Main {
 
       config.setJdbcUrl(dbUrl);
       config.setDriverClassName(classname);
+
+      System.out.println("------------> "+config.getJdbcUrl());
       return new HikariDataSource(config);
     }
   } 
