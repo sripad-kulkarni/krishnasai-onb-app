@@ -11,4 +11,4 @@ docs/deploying-spring-boot-apps/
 .mvn/wrapper/maven-wrapper.jar
 server.key
 server.csr
-server
+server.crt
