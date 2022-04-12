@@ -82,7 +82,7 @@ public class Main {
     headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
     HttpEntity<String> entity = new HttpEntity<String>(headers);
     RestTemplate rest=new RestTemplate();
-    return "Hiiii"+ rest.exchange("https://krishnasai-helper-app.herokuapp.com/times", HttpMethod.GET, entity, String.class).getBody();
+    return "Hiiii"+ rest.exchange("https://krishnasai-helper-app.herokuapp.com/db", HttpMethod.GET, entity, String.class).getBody();
   }
   
   @RequestMapping("/hello")
