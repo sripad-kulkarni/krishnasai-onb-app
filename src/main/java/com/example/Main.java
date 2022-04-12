@@ -82,8 +82,7 @@ public class Main {
     headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
     HttpEntity<String> entity = new HttpEntity<String>(headers);
     RestTemplate rest=new RestTemplate();
-    rest.exchange("https://krishnasai-helper-app.herokuapp.com/times", HttpMethod.GET, entity, String.class).getBody();
-    return "Hiiii";
+    return "Hiiii"+ rest.exchange("https://krishnasai-helper-app.herokuapp.com/times", HttpMethod.GET, entity, String.class).getBody();
   }
   
   @RequestMapping("/hello")
@@ -137,7 +136,6 @@ public class Main {
       config.setJdbcUrl(dbUrl);
       config.setDriverClassName(classname);
 
-      System.out.println("------------> "+config.getJdbcUrl());
       return new HikariDataSource(config);
     }
   } 
