@@ -1,4 +1,4 @@
-# java-getting-started
+# java-getting-started CI
              
 A barebones Java a       pp, which can easily be deployed to Heroku.
 
