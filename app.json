@@ -19,7 +19,7 @@
           }
       }
    }
-}
+},
   "addons": [
     "memcachedcloud:30"
   ]
