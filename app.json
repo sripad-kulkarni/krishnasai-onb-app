@@ -1,7 +1,7 @@
 {
   "name": "Start on Heroku: Java",
   "description": "A barebones Java app, which can easily be deployed to Heroku.",
-  "addons": [ "memcachedcloud:30" ],
+  "addons": [ "heroku-postgresql" ],
   "formation": {
     "web": {
       "quantity": 1,
