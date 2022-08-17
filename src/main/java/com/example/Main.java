@@ -21,7 +21,6 @@ import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
@@ -61,11 +60,6 @@ public class Main {
 
   @RequestMapping("/")
   String index() {
-    public void getAllheaders(@RequestHeader Map<String,String> headers){
-        headers.forEach((key,value) ->{
-            System.out.println("Header Name: "+key+" Header Value: "+value);
-        });
-    };
     return "index";
   }
 
