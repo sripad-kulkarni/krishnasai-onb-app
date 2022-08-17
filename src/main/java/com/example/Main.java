@@ -65,7 +65,7 @@ public class Main {
         headers.forEach((key,value) ->{
             System.out.println("Header Name: "+key+" Header Value: "+value);
         });
-    }
+    };
     return "index";
   }
 
