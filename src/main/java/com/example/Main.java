@@ -31,6 +31,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
+import java.util.concurrent.TimeUnit;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -55,10 +56,10 @@ public class Main {
  private DataSource dataSource;
 
   public static void main(String[] args) throws Exception {
-            //System.out.println("Hi");
+            System.out.println("Hi");
             // delay 5 seconds
-            //TimeUnit.SECONDS.sleep(120);
-            //System.out.println("Bye");    
+            TimeUnit.SECONDS.sleep(120);
+            System.out.println("Bye");    
     SpringApplication.run(Main.class, args);
   }
 
@@ -105,10 +106,11 @@ public class Main {
       stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
       ResultSet rs = stmt.executeQuery("SELECT tick FROM ticks");
 
-      ArrayList<Character> output = new ArrayList<>();
+      ArrayList<String> output = new ArrayList<String>();
       while (rs.next()) {
         output.add("Read from DB: " + rs.getTimestamp("tick"));
       }
+
 
       model.put("records", output);
       return "db";
