@@ -31,6 +31,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
+import java.util.concurrent.TimeUnit;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -55,6 +56,10 @@ public class Main {
  private DataSource dataSource;
 
   public static void main(String[] args) throws Exception {
+            System.out.println("Start..." + new Date());
+            // delay 5 seconds
+            TimeUnit.SECONDS.sleep(120);
+            System.out.println("End..." + new Date());    
     SpringApplication.run(Main.class, args);
   }
 
