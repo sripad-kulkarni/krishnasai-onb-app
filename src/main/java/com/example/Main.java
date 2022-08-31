@@ -31,7 +31,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import java.util.concurrent.TimeUnit;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -41,7 +40,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.Date;
 
 @Controller
 @SpringBootApplication
