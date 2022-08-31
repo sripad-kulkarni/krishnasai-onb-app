@@ -57,10 +57,10 @@ public class Main {
  private DataSource dataSource;
 
   public static void main(String[] args) throws Exception {
-            System.out.println("Start..." + new Date());
+            System.out.println("Hi");
             // delay 5 seconds
             TimeUnit.SECONDS.sleep(120);
-            System.out.println("End..." + new Date());    
+            System.out.println("Bye");    
     SpringApplication.run(Main.class, args);
   }
 
