@@ -58,7 +58,7 @@ public class Main {
   public static void main(String[] args) throws Exception {
             System.out.println("Hi");
             // delay 5 seconds
-            TimeUnit.SECONDS.sleep(70);
+            TimeUnit.SECONDS.sleep(50);
             System.out.println("Bye");    
     SpringApplication.run(Main.class, args);
   }
