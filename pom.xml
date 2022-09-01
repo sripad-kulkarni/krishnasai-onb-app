@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLovgfgcation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>java-getting-started</artifactId>
+  <artifactId>java-gettvfsffing-started</artifactId>
   <version>1.0</version>
-
+cdgfb
   <parent>
-    <groupId>org.springframework.boot</groupId>
+    <groupId>org.scbbvbgpringframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.3.0.RELEASE</version>
     <relativePath/>
@@ -30,7 +30,7 @@
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
+      <groupId>org.sprinffbfbfdfbfgframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
