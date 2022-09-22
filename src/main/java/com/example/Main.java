@@ -41,6 +41,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import java.util.Date;
 
 @Controller
 @SpringBootApplication
@@ -95,6 +97,7 @@ public class Main {
   @RequestMapping("/hello")
   @ResponseBody
   String index3() {
+    TimeUnit.SECONDS.sleep(31); 
     return "Hello";
   }  
   @RequestMapping("/db")
