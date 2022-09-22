@@ -97,7 +97,14 @@ public class Main {
   @RequestMapping("/hello")
   @ResponseBody
   String index3() {
+          try
+      {
     TimeUnit.SECONDS.sleep(31); 
+          }
+    catch(InterruptedException ex)
+      {
+          ex.printStackTrace();
+      }
     return "Hello";
   }  
   @RequestMapping("/db")
