@@ -94,11 +94,6 @@ public class Main {
      return "Hiiii";
     }
   
-  @RequestMapping("/hello")
-  @ResponseBody
-  String index3() {
-    return "Hello";
-  }  
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
