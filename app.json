@@ -22,11 +22,11 @@
 			"formation": {
 				"worker": {
 					"quantity": 1,
-					"size": "standard-1x"
+					"size": "standard-2x"
 				},
 				"web": {
 					"quantity": 1,
-					"size": "standard-1x"
+					"size": "standard-2x"
 				}
 			}
 		}
