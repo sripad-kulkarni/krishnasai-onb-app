@@ -4,8 +4,7 @@
   "addons": [ "heroku-postgresql" ],
   "formation": {
     "web": {
-      "quantity": 1,
-      "size": "standard-2x"
+      "quantity": 1
     }
   },
   "scripts": {
