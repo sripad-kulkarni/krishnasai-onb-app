@@ -96,6 +96,7 @@ public class Main {
     }
   
       @RequestMapping("/postbody")
+  @ResponseBody
     public void postBody(@RequestBody String fullName) {
       
       System.out.println("Bye"+ fullName); 
