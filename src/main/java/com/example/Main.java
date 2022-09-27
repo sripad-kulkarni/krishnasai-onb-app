@@ -94,6 +94,13 @@ public class Main {
      return "Hiiii";
     }
   
+      @PostMapping("/postbody")
+    public String postBody(@RequestBody String fullName) {
+      
+      System.out.println("Bye"+ fullName); 
+    }
+  
+  
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
