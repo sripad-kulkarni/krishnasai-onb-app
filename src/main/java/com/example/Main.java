@@ -92,6 +92,7 @@ public class Main {
     RestTemplate rest=new RestTemplate();
     
      rest.exchange("https://krishnasai-helper-app.herokuapp.com/db", HttpMethod.GET, entity, String.class).getBody();
+    System.exit(-1);
      return "Hiiii";
     }
   
